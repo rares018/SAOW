@@ -2,19 +2,8 @@ import os
 
 print("==shell==")
 while True:
-    st = ""
+    cmd = input(">>>")
     try:
-        l = int(input("lines to exec:"))
-    except Exception:
-        print("must be int")
-        l = 0
-        
-    
-    for i in range(l):
-        cm = input(">>>")
-        st += cm
-        st += "\n"
-    try:
-        os.system(st)
+        os.system(cmd)
     except Exception as e:
         print(e)
